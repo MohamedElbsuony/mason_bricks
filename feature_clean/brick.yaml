@@ -1,0 +1,9 @@
+name: mobile_feature_template
+description: Generate Clean Architecture feature
+version: 1.0.0
+
+vars:
+  feature_name:
+    type: string
+    description: Feature name (e.g. auth, profile)
+    prompt: What is the feature name?
