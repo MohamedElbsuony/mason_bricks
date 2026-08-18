@@ -1,0 +1,18 @@
+name: app_scaffold
+description: A clean-architecture Flutter project scaffold brick.
+version: 0.1.0+1
+
+environment:
+  mason: ">=0.1.0-dev.38 <0.1.0"
+
+vars:
+  project_name:
+    type: string
+    description: Enter project name:
+    default: my_app
+    prompt: Enter project name:
+  project_description:
+    type: string
+    description: Enter project description:
+    default: A clean Flutter project scaffold
+    prompt: Enter project description:
