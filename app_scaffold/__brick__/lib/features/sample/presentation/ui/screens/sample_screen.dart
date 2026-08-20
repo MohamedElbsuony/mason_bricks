@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:{{project_name.snakeCase()}}/core/assets/app_assets.dart';
+import 'package:{{project_name.snakeCase()}}/features/sample/domain/inputs/sample_inputs.dart';
 import 'package:{{project_name.snakeCase()}}/features/sample/presentation/blocs/sample_cubit.dart';
 import 'package:{{project_name.snakeCase()}}/features/sample/presentation/blocs/sample_state.dart';
 
@@ -56,7 +57,7 @@ class SampleScreen extends StatelessWidget {
                   SizedBox(height: 24.h),
                   ElevatedButton.icon(
                     onPressed: () {
-                      context.read<SampleCubit>().loadSampleData(1);
+                      context.read<SampleCubit>().loadSampleData(const SampleInputs(id: 1));
                     },
                     icon: const Icon(Icons.refresh),
                     label: Text(
@@ -78,7 +79,7 @@ class SampleScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 12.h),
                   ElevatedButton(
-                    onPressed: () => context.read<SampleCubit>().loadSampleData(1),
+                    onPressed: () => context.read<SampleCubit>().loadSampleData(const SampleInputs(id: 1)),
                     child: Text('Retry', style: TextStyle(fontSize: 14.sp)),
                   ),
                 ],

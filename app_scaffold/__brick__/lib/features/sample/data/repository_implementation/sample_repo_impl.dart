@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:{{project_name.snakeCase()}}/core/network/error_handler.dart';
 import 'package:{{project_name.snakeCase()}}/features/sample/data/datasource/base/sample_base_datasource.dart';
 import 'package:{{project_name.snakeCase()}}/features/sample/domain/entities/sample_entity.dart';
+import 'package:{{project_name.snakeCase()}}/features/sample/domain/inputs/sample_inputs.dart';
 import 'package:{{project_name.snakeCase()}}/features/sample/domain/repository/sample_base_repo.dart';
 
 class SampleRepoImpl implements SampleBaseRepo {
@@ -10,12 +11,13 @@ class SampleRepoImpl implements SampleBaseRepo {
   SampleRepoImpl(this.remoteDatasource);
 
   @override
-  Future<Either<Failure, SampleEntity>> getSampleData(int id) async {
+  Future<Either<Failure, SampleEntity>> getSampleData(SampleInputs inputs) async {
     try {
-      final result = await remoteDatasource.fetchSampleData(id);
+      final result = await remoteDatasource.fetchSampleData(inputs);
       return Right(result);
     } catch (error) {
       return Left(ErrorHandler.handle(error).failure);
     }
   }
 }
+

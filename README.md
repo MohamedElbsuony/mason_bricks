@@ -145,6 +145,7 @@ lib/features/auth/
 ├── domain/
 │   ├── entities/auth_entity.dart
 │   ├── enums/
+│   ├── inputs/auth_inputs.dart
 │   ├── repository/auth_base_repo.dart
 │   └── use_cases/
 │       ├── base/auth_base_use_cases.dart
@@ -185,7 +186,7 @@ After generating a new feature (e.g. `auth`):
 1. **Functional Error Handling (`dartz`)**:
    Repositories and UseCases return `Future<Either<Failure, T>>`. Cubits consume results using `.fold(...)`:
    ```dart
-   final result = await getSampleData(id);
+   final result = await getSampleData(inputs);
    result.fold(
      (failure) => emit(SampleError(failure.message)),
      (data) => emit(SampleLoaded(data)),

@@ -3,8 +3,9 @@
 ## Feature Structure (`lib/features/`)
 Each feature folder follows standard clean architecture:
 - `data/` (datasources, models, repositories implementations)
-- `domain/` (entities, usecases, repository interfaces)
+- `domain/` (entities, enums, inputs, usecases, repository interfaces)
 - `presentation/` (controllers/cubits/blocs, pages, widgets)
+
 
 ## Core Scaffolding (`lib/core/`)
 - `app_injection`: GetIt service locator setup

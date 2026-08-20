@@ -1,26 +1,26 @@
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "{{project_name.titleCase()}} (Dev)",
-      "request": "launch",
-      "type": "dart",
-      "program": "lib/main.dart",
-      "args": ["--dart-define=ENV=dev"]
-    },
-    {
-      "name": "{{project_name.titleCase()}} (Stag)",
-      "request": "launch",
-      "type": "dart",
-      "program": "lib/main.dart",
-      "args": ["--dart-define=ENV=stag"]
-    },
-    {
-      "name": "{{project_name.titleCase()}} (Prod)",
-      "request": "launch",
-      "type": "dart",
-      "program": "lib/main.dart",
-      "args": ["--dart-define=ENV=prod"]
-    }
-  ]
-}
+// {
+//   "version": "0.2.0",
+//   "configurations": [
+//     {
+//       "name": "{{project_name.titleCase()}} (Dev)",
+//       "request": "launch",
+//       "type": "dart",
+//       "program": "lib/main.dart",
+//       "args": ["--dart-define=ENV=dev"]
+//     },
+//     {
+//       "name": "{{project_name.titleCase()}} (Stag)",
+//       "request": "launch",
+//       "type": "dart",
+//       "program": "lib/main.dart",
+//       "args": ["--dart-define=ENV=stag"]
+//     },
+//     {
+//       "name": "{{project_name.titleCase()}} (Prod)",
+//       "request": "launch",
+//       "type": "dart",
+//       "program": "lib/main.dart",
+//       "args": ["--dart-define=ENV=prod"]
+//     }
+//   ]
+// }
